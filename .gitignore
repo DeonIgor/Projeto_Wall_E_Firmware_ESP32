@@ -1,0 +1,23 @@
+# Arquivos de configuração de debug
+*.cfg
+*.json
+*.svd
+
+# Arquivos temporários
+*.hex
+*.elf
+*.bin
+
+# Diretórios da build
+build/
+*.d
+*.o
+
+# VS Code ou PlatformIO
+.vscode/
+.pio/
+*.vscode
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
