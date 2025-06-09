@@ -154,8 +154,7 @@ const char index_html[] PROGMEM = R"rawliteral(
 		<script>
 			let ws;
 			function initWS() {
-				//ws = new WebSocket('ws://' + location.host + '/ws');
-				ws = new WebSocket('ws://localhost:81');
+				ws = new WebSocket('ws://' + location.host + '/ws');
 				ws.onopen = () => console.log('WebSocket conectado');
 				ws.onclose = () => {
 					console.log('WebSocket desconectado. Tentando reconectar...');
