@@ -5,14 +5,14 @@
 
 #define CYCLE_DELAY 10
 
-#define MOTOR_ESQ_1 14
-#define MOTOR_ESQ_2 27
-#define MOTOR_ESQ_3 26
-#define MOTOR_ESQ_4 25
+#define MOTOR_ESQ_1 16
+#define MOTOR_ESQ_2 0
+#define MOTOR_ESQ_3 4
+#define MOTOR_ESQ_4 15
 
 #define MOTOR_DIR_1 19
-#define MOTOR_DIR_2 18
-#define MOTOR_DIR_3 5
+#define MOTOR_DIR_2 5
+#define MOTOR_DIR_3 18
 #define MOTOR_DIR_4 17
 
 #define STEPS_PER_REVOLUTION  2048

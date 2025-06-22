@@ -42,6 +42,16 @@ void setup() {
 
   pinMode(LED_PIN, OUTPUT);
 
+  pinMode(MOTOR_ESQ_1, OUTPUT);
+  pinMode(MOTOR_ESQ_2, OUTPUT);
+  pinMode(MOTOR_ESQ_3, OUTPUT);
+  pinMode(MOTOR_ESQ_4, OUTPUT);
+
+  pinMode(MOTOR_DIR_1, OUTPUT);
+  pinMode(MOTOR_DIR_2, OUTPUT);
+  pinMode(MOTOR_DIR_3, OUTPUT);
+  pinMode(MOTOR_DIR_4, OUTPUT);
+
   // Define IP fixo (sem isso funciona da mesma forma)
   IPAddress local_ip(192, 168, 4, 1);
   IPAddress gateway(192, 168, 4, 1);
