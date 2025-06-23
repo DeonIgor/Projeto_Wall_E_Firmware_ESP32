@@ -17,11 +17,13 @@
 
 #define STEPS_PER_REVOLUTION  2048
 
-#define LED_PIN     2
+#define LED_PIN               2
 #define SHORT_BLINK_INTERVAL  200
 #define LONG_BLINK_INTERVAL   1000
 
-#define INITIAL_RPM 10
+#define INITIAL_RPM           10
+
+#define IR_SENSOR_PIN         13
 
 extern String active_cmd;
 
@@ -30,6 +32,8 @@ extern const int rpm;
 extern unsigned long lastBlink;
 extern unsigned long blinkInterval;
 extern bool ledState;
+
+extern String last_motion_cmd;
 
 extern const char* ssid;
 extern const char* password;

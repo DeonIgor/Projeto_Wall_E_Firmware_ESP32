@@ -8,6 +8,9 @@ unsigned long lastBlink = 0;
 unsigned long blinkInterval = LONG_BLINK_INTERVAL;
 bool ledState = false;
 
+String last_motion_cmd = "stop";
+
+
 const char* ssid = "Wall-E-Robot";
 const char* password = "12345678";
 const short port = 80;

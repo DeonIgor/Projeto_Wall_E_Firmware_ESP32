@@ -12,9 +12,17 @@ AsyncWebSocket ws("/ws");
 Stepper motor_left(STEPS_PER_REVOLUTION, MOTOR_ESQ_1, MOTOR_ESQ_2, MOTOR_ESQ_3, MOTOR_ESQ_4);
 Stepper motor_right(STEPS_PER_REVOLUTION, MOTOR_DIR_1, MOTOR_DIR_2, MOTOR_DIR_3, MOTOR_DIR_4);
 
-
 void handleCommand(String cmd) {
+  bool obstacleDetected = digitalRead(IR_SENSOR_PIN) == LOW;
+  bool isMotion = (cmd == "forward" || cmd == "backward" || cmd == "left" || cmd == "right");
+
+  if (obstacleDetected && isMotion && cmd == last_motion_cmd) return;
+
   active_cmd = cmd;
+
+  if (isMotion) {
+    last_motion_cmd = cmd;
+  }
 }
 
 void onWebSocketEvent(AsyncWebSocket *server, AsyncWebSocketClient *client, AwsEventType type, void *arg, uint8_t *data, size_t len) {
@@ -83,6 +91,7 @@ void setup() {
 }
 
 void loop() {
+
   if(active_cmd == "forward") {
     motor_left.step(1);
     motor_right.step(1);
